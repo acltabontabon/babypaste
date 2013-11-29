@@ -1,0 +1,52 @@
+.ui-layout-pane-north .ui-layout-unit-content {
+    overflow:hidden !important;
+    background-color: #314573;
+}     
+
+.ui-layout-pane-north {
+    border: 0;
+    background-color: #314573;
+    height: 70px !important;
+}
+
+.ui-layout-pane-center {
+    border: 0;
+}
+
+.center-content {
+    min-height: 300px;
+    margin: 0 3% 0 3%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+}
+
+#title{
+    font-size: 2.0em;
+    color: snow;
+    margin-top: -0.1%;
+    margin-left: 1%;
+    float: left;
+}
+
+#sub-title {
+    float: left;
+    margin-left: -24%;
+    margin-top: 3.7%;
+    font-size: 1.25em;
+    font-style: italic;
+    color: snow;
+}
+
+#author {
+    float: left;
+    margin-left: 0.5%;
+    font-size: 0.5em;
+    color: #e0e0e0;
+}
+
+.panelgrid tr, .panelgrid td {
+    border: none !important;
+}

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Baby Paste</title>
+        <meta name="description" content="BabyPaste by Tabs - A convenient way to share your source codes!" /> 
+        <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north">
+                <p id="title">
+                    <p id="title"> <b>BABY PASTE!</b>  </p> <p id="author">by Tabs</p>
+                    <p id="sub-title">A convenient way to share your source codes!</p>
+                </p>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <div class="center-content">
+                    <h:form>
+                        <p:panelGrid styleClass="panelgrid">
+                            <p:row>
+                                <p:column>
+                                    <p:outputLabel value="Poster:" />
+                                </p:column>
+                                <p:column>
+                                    <p:inputText value="#{PasteBean.poster}" required="true" style="width: 242px;"/>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>
+                                    <p:outputLabel value="Syntax:" />
+                                </p:column>
+                                <p:column>
+                                    <p:selectOneMenu value="#{PasteBean.syntax}" style="width: 250px;">
+                                        <f:selectItem itemLabel="Action Script 3" itemValue="shBrushAS3.js" />
+                                        <f:selectItem itemLabel="Apple Script" itemValue="shBrushAppleScript.js" />
+                                        <f:selectItem itemLabel="Bash" itemValue="shBrushBash.js" />
+                                        <f:selectItem itemLabel="C#" itemValue="shBrushCSharp.js" />
+                                        <f:selectItem itemLabel="Cold Fusion" itemValue="shBrushColdFusion.js" />
+                                        <f:selectItem itemLabel="C++" itemValue="shBrushCpp.js" />
+                                        <f:selectItem itemLabel="CSS" itemValue="shBrushCss.js" />
+                                        <f:selectItem itemLabel="Delphi" itemValue="shBrushDelphi.js" />
+                                        <f:selectItem itemLabel="Diff" itemValue="shBrushDiff.js" />
+                                        <f:selectItem itemLabel="Erlang" itemValue="shBrushErlang.js" />
+                                        <f:selectItem itemLabel="Groovy" itemValue="shBrushGroovy.js" />
+                                        <f:selectItem itemLabel="JavaScript" itemValue="shBrushJScript.js" />
+                                        <f:selectItem itemLabel="Java" itemValue="shBrushJava.js" />
+                                        <f:selectItem itemLabel="JavaFX" itemValue="shBrushJavaFX.js" />
+                                        <f:selectItem itemLabel="Perl" itemValue="shBrushPerl.js" />
+                                        <f:selectItem itemLabel="PHP" itemValue="shBrushPhp.js" />
+                                        <f:selectItem itemLabel="Plain" itemValue="shBrushPlain.js" />
+                                        <f:selectItem itemLabel="PowerShell" itemValue="shBrushPowerShell.js" />
+                                        <f:selectItem itemLabel="Python" itemValue="shBrushPython.js" />
+                                        <f:selectItem itemLabel="Ruby" itemValue="shBrushRuby.js" />
+                                        <f:selectItem itemLabel="Sass" itemValue="shBrushSass.js" />
+                                        <f:selectItem itemLabel="Scala" itemValue="shBrushScala.js" />
+                                        <f:selectItem itemLabel="SQL" itemValue="shBrushSql.js" />
+                                        <f:selectItem itemLabel="Visual Baic" itemValue="shBrushVb.js" />
+                                        <f:selectItem itemLabel="XML" itemValue="shBrushXml.js" />
+                                    </p:selectOneMenu>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column colspan="2">
+                                    <p:inputTextarea value="#{PasteBean.code}" rows="10" cols="50" />
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column colspan="2" style="text-align: right">
+                                    <p:commandButton action="#{PasteBean.submit}" value="Paste" />
+                                </p:column>
+                            </p:row>
+                        </p:panelGrid>
+
+                    </h:form>
+                </div>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+
